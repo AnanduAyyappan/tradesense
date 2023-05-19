@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\intercafe.css">
+	<title>Line Chart Example</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			margin: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		canvas {
+			margin: 0 auto;
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="logout-form">
+        <form action="logout.php" method="post">
+            <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\login.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Human-gnome-logout.svg/2048px-Human-gnome-logout.svg.png" alt="Button Image" class="image-button">
+            </a>
+        </form>   
+    </div>
+
+    <h1></h1>
+    <canvas id="myChart"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                    fill: false
+                },
+                {
+                    label: 'Dataset 2',
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    data: [10, 5, 15, 12, 25, 35, 30],
+                    fill: false
+                }]
+            },
+            options: {}
+        });
+    </script>
+
+    <center>
+        <div class="container">
+            <h1>𝒲ℯ𝓁𝒸ℴ𝓂ℯ 𝒯ℴ 𝒯𝓇𝒶𝒹ℯ𝓈ℯ𝓃𝓈ℯ</h1>
+            <p>We help you to be the best</p>
+            <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\profile.html" class="button">Profile</a>
+            <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\homepage.html" class="button">Home Page</a>
+        </div>
+    </center>
+    
+</body>
+</html>

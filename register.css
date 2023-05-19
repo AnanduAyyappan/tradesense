@@ -1,0 +1,82 @@
+/* Center the contents of the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  
+  /* Style for the OTP container */
+  .otp-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style for the OTP input fields */
+  .otp-container input[type="text"] {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    background-color: #0c1033;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    width: 160px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style for the submit button when hovered */
+  button[type="submit"]:hover {
+    background-color: #06023f;
+  }
+  
+  /* Style for the "Resend OTP" button */
+  button[type="resend"] {
+    background-color: #0c1033;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 160px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Style for the "Resend OTP" button when hovered */
+  button[type="resend"]:hover {
+    background-color: #06023f;
+  }
+  .image-button {
+    width: 40px; /* Adjust the width as desired /
+    height: 40px; / Adjust the height as desired */
+    }
+    .container {
+      padding: 16px;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+    }
+    
+   
+    .container {
+      max-width: 400px; /* Adjust the maximum width as desired */
+      width: 100%;
+      padding: 16px;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+  }
+  

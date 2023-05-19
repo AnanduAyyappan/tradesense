@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\notification.css">
+    <title>Notification Example</title>
+</head>
+<body>
+   <center><p><h1>Notifications</h1></p></center> 
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <div class="notification-container">
+        <img src="https://w7.pngwing.com/pngs/881/489/png-transparent-red-bell-notification-thumbnail.png" alt="Notification Icon" class="notification-icon">
+        <div class="notification-message">This is a notification message.</div>
+        <span class="notification-close" onclick="closeNotification()">✖</span>
+    </div>
+    <br><br><a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\homepage.html">
+        <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button">
+      </form>
+    <script>
+         var closeButtons = document.querySelectorAll('.notification-close');
+
+// Add event listener to each close button
+closeButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        // Find the parent notification container
+        var notification = this.parentNode;
+
+        // Hide the notification container
+        notification.style.display = 'none';
+    });
+});
+        function closeNotification() {
+            var notification = document.querySelector('.notification-container');
+            notification.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

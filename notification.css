@@ -1,0 +1,57 @@
+.notification-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.notification-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.notification-message {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.notification-close {
+    cursor: pointer;
+    color: #999;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.notification-close:hover {
+    color: #555;
+}
+
+.image-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-button:hover {
+    transform: scale(1.1);
+}
+.image-button {
+    width: 40px;
+    height: 40px; 
+  }
+  body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }

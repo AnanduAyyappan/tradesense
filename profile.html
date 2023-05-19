@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\profilestyle.css">
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <title>React App</title>
+  <script>
+    function changeProfilePicture() {
+      var profileImage = document.getElementById("profileImage");
+      var newImageUrl = prompt("Enter the URL of the new profile picture:");
+      if (newImageUrl) {
+        profileImage.src = newImageUrl;
+      }
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="container">
+      <form action="action_page.php">
+        <div class="profile">
+          <img id="profileImage" src="" alt="Profile Picture" onerror="this.onerror=null;this.src='https://zeru.com/blog/wp-content/uploads/How-Do-You-Have-No-Profile-Picture-on-Facebook_25900';">
+          <br><br>
+          <button type="button" class="button" onclick="changeProfilePicture()">Change Picture</button>
+          <br><br>
+        </div>
+        <div class="form-group">
+        <div class="container">
+          <label for="fname"><b>First Name</b></label>
+          <input type="text" placeholder="First Name" name="fname" id="fname" required>
+        </div>
+        <div class="form-group">
+          <label for="lname"><b>Last Name</b></label>
+          <input type="text" placeholder="Last Name" name="lname" id="lname" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><b>E-mail Id</b></label>
+          <input type="text" placeholder="E-mail id" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneno"><b>Phone Number</b></label>
+          <input type="text" placeholder="Phone Number" name="phoneno" id="phoneno" required>
+        </div>
+        <div class="form-group">
+          <label for="userid"><b>User ID</b></label>
+          <input type="text" placeholder="User ID" name="userid" id="userid" required>
+        </div>
+        <button type="edit" class="editButton">Edit Profile</button><br><br>
+        <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\intercafe.html">
+        <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button">
+      </form>
+    </div>
+    </div>
+  </center>
+</body>
+</html>

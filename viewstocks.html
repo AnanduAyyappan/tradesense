@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+        }
+        
+        th {
+            padding: 10px;
+        }
+        
+        td {
+            padding: 5px;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            padding: 16px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+        
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .search-container input[type=text] {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        .search-container button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #06023f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .image-button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', getData);
+
+        function getData() {
+            // Make an API call or fetch data from the server-side script
+            // Replace the URL below with the actual endpoint that fetches data from the database
+            const url = 'your_api_endpoint';
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Get the table body element
+                    const tableBody = document.getElementById('table-body');
+
+                    // Iterate over the data and create table rows
+                    data.forEach(rowData => {
+                        const row = document.createElement('tr');
+
+                        // Create table cells and populate them with data
+                        const idCell = document.createElement('td');
+                        idCell.textContent = rowData.id;
+
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = rowData.name;
+
+                        const emailCell = document.createElement('td');
+                        emailCell.textContent = rowData.email;
+
+                        // Append the cells to the row
+                        row.appendChild(idCell);
+                        row.appendChild(nameCell);
+                        row.appendChild(emailCell);
+
+                        // Append the row to the table body
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+    <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\market.html">
+        <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button" onclick="goBack()">
+    </a>
+    <div class="container">
+        <h1 style="text-align: center;">My Stocks</h1>
+
+        <table id="myTable">
+            <tr>
+                <th style="padding-right: 170px;"><h2>Company</h2></th>
+                <th style="padding-right: 170px;"><h2>Stocks</h2></th>
+                <th style="padding-right: 170px;"><h2>Amount Spend</h2></th>
+                <th style="padding-right: 170px;"><h2>Current Price</h2></th>
+            </tr>
+            <tbody id="table-body">
+                <!-- Table rows will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

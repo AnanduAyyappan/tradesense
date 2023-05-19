@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.editButton {
+  background-color: #06023f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.editButton:hover {
+  background-color: #06023f;
+}
+
+.button {
+  background-color: #06023f;
+  border-radius: 5px;
+  border: none;
+  width: 200px; /* Set the desired width for the buttons */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-width {
+  width: 200px; /* Set the same width for both buttons */
+}
+.button-width {
+  width: 200px; /* Set the same width for both buttons */
+}
+
+.button:hover {
+  background-color: #06023f;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: #06023f;
+}
+
+body {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label,
+.form-group input {
+  display: block;
+  width: 100%;
+}
+.image-button {
+  width: 40px;
+  height: 40px; 
+}

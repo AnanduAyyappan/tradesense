@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\viewgraph.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\market.html">
+        <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button"></a>
+    <br><br>
+    <br><br><center>
+    <div class="search-container">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="searchInput" placeholder="Enter company id">
+         <button onclick="handleSearch()">Search</button>
+     </div>
+    <br><br>
+    <p><h2>The graph given below is a real time graph,analyse carefully</h2></p>
+</center>
+    <br><br>
+  <div id="graphContainer"></div>
+
+  <script>
+      function handleSearch() {
+            var searchTerm = document.getElementById("searchInput").value;
+            fetchData(searchTerm);
+        }
+    // Fetch data from the API
+    fetch('https://api.example.com/graph-data')
+      .then(response => response.json())
+      .then(data => {
+        // Extract necessary data for the graph from the API response
+        const labels = data.labels;
+        const values = data.values;
+
+        // Create a chart using Chart.js
+        const ctx = document.getElementById('graphContainer').getContext('2d');
+        const chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Data',
+              data: values,
+              backgroundColor: 'rgba(0, 123, 255, 0.5)', // Set desired background color
+              borderColor: 'rgba(0, 123, 255, 1)', // Set desired border color
+              borderWidth: 1
+            }]
+          },
+          options: {
+            // Add desired chart options and customization here
+          }
+        });
+      })
+      .catch(error => {
+        console.log('Error fetching data:', error);
+      });
+  </script>
+</body>
+</html>

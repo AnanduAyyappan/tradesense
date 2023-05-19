@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+    }
+    
+    th {
+        padding: 10px;
+    }
+    
+    td {
+        padding: 5px;
+    }
+    
+    .container {
+        max-width: 1100px;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+    }
+    
+    .search-container {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .search-container input[type=text] {
+        padding: 5px;
+        width: 200px;
+    }
+    
+    .search-container button {
+        padding: 5px 10px;
+        margin-left: 10px;
+        background-color: #06023f;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .container {
+        position: relative;
+    }
+    
+    .image-button {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+    
+    </style>
+    
+    <script>
+        function fetchData() {
+            fetch('https://api.example.com/data') 
+                .then(response => response.json())
+                .then(data => {
+                    var table = document.getElementById("myTable");
+                    table.innerHTML = '';
+                  
+                    data.forEach(rowData => {
+                        var row = table.insertRow();
+                        rowData.forEach(cellData => {
+                            var cell = row.insertCell();
+                            cell.innerHTML = cellData;
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.log('Error fetching data:', error);
+                });
+        }
+        
+        
+        fetchData();
+        setInterval(fetchData, 10000);
+
+        function handleSearch() {
+            var searchTerm = document.getElementById("searchInput").value;
+            fetchData(searchTerm);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+    <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button" onclick="goBack()">
+    <div class="container">
+        <h1 style="text-align: center;">Explore</h1>
+        <div class="search-container">
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="handleSearch()">Search</button>
+        </div>
+        
+        <table id="myTable">
+            <tr>
+                <th style="padding-right: 380px;"><h2>Company</h2></th>
+                <th style="padding-right: 380px;"><h2>Stocks</h2></th>
+                <th style="padding-right: 380px;"><h2>Price/Stock</h2></th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

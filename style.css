@@ -1,88 +1,118 @@
 /* Center the form on the page */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Style the container for the form elements */
-  .container {
-    padding: 16px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-  }
-  
-  /* Style the input fields */
-  input[type=text], input[type=password] {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .otp-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .otp-container input {
-    width: 2rem;
-    height: 2rem;
-    text-align: center;
-    margin: 0 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  
-  /* Style the submit button */
-  button[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-    button[type=resend] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    }
+/* Style the container for the form elements */
+.container {
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
 
-    
-    body {
-        background-image: url("data:image/jpeg;base64,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");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
-      
-      
+/* Style the input fields */
+input[type=text],
+input[type=password] {
+  width: 200px; /* Adjust the width as desired */
+  padding: 12px 20px;
+  font-size: 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-  
-  /* Style the submit button when hovered */
-  button[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style the links */
-  a {
-    color: dodgerblue;
-  }
-  
-  /* Style the container for the "Already have an account?" message */
-  .signin {
-    text-align: center;
-  }
-  
-  
+.phone-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add a margin-bottom for spacing */
+}
+
+.phone-input label {
+  margin-right: 10px;
+}
+
+.phone-input input[type=text] {
+  width: 150px; /* Adjust the width as desired */
+}
+
+.otp-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.otp-input input {
+  width: 30px; /* Adjust the width as desired */
+  height: 40px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Add this line */
+}
+
+/* Style the submit buttons */
+button[type="submit"],
+button[type="resend"],
+button[type="goback"] {
+  background-color: #0c1033;
+  width: 200px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 150px; /* Adjust the width as desired */
+  background-color: #0c1033;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #0c1033;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh; /* Set the body height to the viewport height */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+
+/* Style the submit button when hovered */
+button[type=submit]:hover {
+  background-color: #0c1033;
+}
+
+/* Style the links */
+a {
+  color: dodgerblue;
+}
+
+/* Style the container for the "Already have an account?" message */
+.signin {
+  text-align: center;
+}

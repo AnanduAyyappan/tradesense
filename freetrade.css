@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 20px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #graphContainer {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    width: 60px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  
+  .button.buy {
+    background-color: red;
+    color: white;
+  }
+  
+ 
+  .button.sell {
+    background-color: green;
+    color: white;
+  }
+  
+  
+  .button.finishtrading {
+    background-color: blue;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #0c1033;
+  }
+  
+  .wallet {
+    margin-right: 20px;
+    width: 60px;
+  }
+  
+  .deduct {
+    margin-right: 20px;
+    width: 60px;
+  }
+  
+  textarea,
+  input[type="number"] {
+    height: 30px;
+    width: 150px;
+  }
+  
+  .deduct button {
+    padding: 14px 28px;
+    font-size: 18px;
+    height: 60px;
+    width: 240px;
+    color: #fff;
+    background-color: #0c1033;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .flex-container > * {
+    margin-left: 20px;
+  }
+  
+  #walletContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .deduct-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+  
+  .button.deduct {
+    width: 300px;
+    height: 100px;
+    font-size: 24px;
+    color: #0c1033;
+    background-color: #0c1033; 
+  }
+  
+  

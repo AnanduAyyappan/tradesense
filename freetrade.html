@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\freetrade.css"
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+<body>
+    <p></p>
+    <div id="walletContainer">
+        Wallet Balance: <span id="walletBalance"></span>
+    
+    <br><br>&nbsp;&nbsp;Enter amount:
+    <br><br><input type="number" id="deductAmountInput" placeholder="Enter amount to deduct">
+    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="deductAmount()">Deduct</button>
+</div>
+<div id="riskcontainer">
+
+    &nbsp;&nbsp;Current Risk: <span id="currentrisk"></span><br><br>
+    Current Profit:<span id="currentprofit"></span>
+    </div>
+    <h1></h1>
+    <div id="graphContainer">
+        <!-- The real-time graph will be inserted here -->
+    </div>
+
+    <!-- Include your JavaScript code to fetch real-time data and update the graph -->
+    <script>
+        // Write your JavaScript code to fetch real-time data and update the graph here
+        // You can use a financial data API or any other data source to retrieve the data
+
+        // Example code to create a line chart using Chart.js library
+        var ctx = document.getElementById('graphContainer').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // Insert the labels for x-axis (e.g., timestamps)
+                datasets: [{
+                    label: 'Real-Time Data',
+                    data: [], // Insert the data points for y-axis
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Time'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Value'
+                        }
+                    }
+                }
+            }
+        });
+        var balance = 1000;
+
+function deductAmount() {
+    var deductAmountInput = document.getElementById("deductAmountInput");
+    var amount = parseFloat(deductAmountInput.value);
+    
+    if (isNaN(amount)) {
+        alert("Please enter a valid amount.");
+        return;
+    }
+
+    balance -= amount;
+    updateWalletBalance();
+}
+
+function updateWalletBalance() {
+    var walletBalanceTextArea = document.getElementById("walletBalance");
+    walletBalanceTextArea.value = "$" + balance.toFixed(2);
+}
+
+updateWalletBalance();
+    </script>
+    <p>
+        <center>
+     <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\ftmessage.html" class="button buy">BUY</a>&nbsp;&nbsp;
+     <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\ftmessage.html" class="button sell">SELL</a><br><br>
+    &nbsp;&nbsp; <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\homepage.html" class="button">Finish</a><br><br>
+    </p>
+        </center>
+    </body>
+</html>

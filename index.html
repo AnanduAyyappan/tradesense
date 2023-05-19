@@ -29,32 +29,20 @@
   </head>
   <body><center>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+    <div class="container">
     <form action="action_page.php">
-      <div class="container">
-        <h1>Register</h1></div>
-        <p>Please fill in this form to create an account.</p>
+      
+        <h1>Register</h1>
+        <p><h2>Please fill in this form to create an account.</h2></p>
         <hr>
     
-        <label for="Phone Number"><b>Phone Number</b></label>
-        <input type="text" placeholder="Phone Number" name="phnoneno" id="phoneno" required>
+        <label for="Phone Number"><b><h2>Phone Number</h2></b></label>
+        <input type="text" placeholder="Phone Number" name="phnoneno" id="phoneno" minlength="9" maxlength="10" required>
+        <p><h2>An OTP has been send to this number</h2></p>
         <br>
-        <p>An OTP has been sent to the number</p>
-        <p><h4>Please enter the OTP</h4></p>
-        <div class="inner-form-div">
-          <div class="all-inputs-div">
-            <input type="text" class="form-control" placeholder="_" maxlength=1 oninput='digitValidate(this)'
-              onkeyup='tabChange(1)'>
-            <input type="text" class="form-control" placeholder="_" maxlength=1 oninput='digitValidate(this)'
-              onkeyup='tabChange(2)'>
-            <input type="text" class="form-control" placeholder="_" maxlength=1 oninput='digitValidate(this)'
-              onkeyup='tabChange(3)'>
-            <input type="text" class="form-control" placeholder="_" maxlength=1 oninput='digitValidate(this)'
-              onkeyup='tabChange(4)'>
-          </div><br>
-          <button type="submit" class="submitButton">Verify OTP</button><br>
-          <button type="resend" class="resendButton">Resend OTP</button>
-        </div>
-        <br>       
+        </form>
+    </div>
+    </div>
   </body>
 </html>

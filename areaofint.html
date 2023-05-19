@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\areaofint.css">
+  <title></title>
+</head>
+<body>
+    <a href="C:\Users\user\Desktop\tradesenseproject\tradesen\public\homepage.html">
+        <img src="https://w7.pngwing.com/pngs/1022/856/png-transparent-button-back-s-blue-text-window-thumbnail.png" alt="Button Image" class="image-button"></a>
+
+    <center><h2>Select the companies that you are interested</h2></center>
+        <h1>Area of Interest</h1>
+       
+        <select id="optionsSelect" onchange="storeSelection('optionsSelect', 'table')"></select>
+        
+        <button onclick="submitData()">Submit</button>
+        <button onclick="refreshOptions()">Refresh</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Select Box</th>
+              <th>Selected Option</th>
+            </tr>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      
+        <script>
+          function generateOptions() {
+            var select = document.getElementById("optionsSelect");
+      
+            
+            for (var i = 1; ; i++) {
+              var option = document.createElement("option");
+              option.text = "Option " + i;
+              select.add(option);
+      
+            
+              if (i === 1000) {
+                break;
+              }
+            }
+          }
+      
+          function storeSelection(selectId, tableId) {
+            var select = document.getElementById(selectId);
+            var selectedOption = select.options[select.selectedIndex].text;
+      
+            var table = document.getElementById(tableId);
+            var newRow = table.insertRow();
+            var selectCell = newRow.insertCell();
+            var optionCell = newRow.insertCell();
+      
+            selectCell.innerHTML = selectId;
+            optionCell.innerHTML = selectedOption;
+      
+            select.selectedIndex = 0; 
+            table.scrollTop = table.scrollHeight;
+          }
+      
+          function refreshOptions() {
+            var select = document.getElementById("optionsSelect");
+            var table = document.getElementById("table");
+      
+            
+            select.selectedIndex = -1;
+      
+            
+            table.innerHTML = "";
+          }
+      
+          function submitData() {
+            var table = document.getElementById("table");
+            var rowCount = table.rows.length;
+      
+           
+            for (var i = 1; i < rowCount; i++) {
+              var selectCell = table.rows[i].cells[0];
+              var optionCell = table.rows[i].cells[1];
+      
+              var selectId = selectCell.innerHTML;
+              var selectedOption = optionCell.innerHTML;
+      
+             
+              console.log("Selected Option: " + selectedOption);
+              
+            }
+          }
+      
+          
+          generateOptions();
+        </script>
+</body>
+</html>

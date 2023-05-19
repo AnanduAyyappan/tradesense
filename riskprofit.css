@@ -1,0 +1,84 @@
+/* Center the form on the page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style the container for the form elements */
+  .container {
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+  
+ 
+  .container {
+    max-width: 500px; /* Adjust the maximum width as desired */
+    width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+  
+  
+
+  
+  
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 60px; /* Adjust the width as desired */
+    background-color: #0c1033;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: #0c1033;
+  }
+  
+  body {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-position: center center;
+  }
+  
+  
+  /* Style the links */
+  a {
+    color: dodgerblue;
+  }
+  .my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0c1033;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.image-button {
+    width: 40px;
+    height: 40px; 
+  }
+  input[type="text"] {
+    padding: 10px;
+    height: 5px;
+    width: 300px; /* Adjust the width as desired */
+    font-size: 16px; /* Adjust the font size as desired */
+  }
+ 
+  

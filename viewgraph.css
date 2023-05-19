@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 20px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  
+  .container {
+    max-width: 400px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 10px;
+    width: 20%;
+  }
+  
+  .search-container button {
+    padding: 7px 20px;
+    background-color: #06023f;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .image-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #riskContainer {
+    margin-top: 20px;
+  }
+  
+  #riskContainer span {
+    font-weight: bold;
+  }
+  
+  .image-button {
+    width: 40px;
+    height: 40px;
+  }
+  #graphContainer {
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    height: 5px;
+    width: 60px; /* Adjust the width as desired */
+    font-size: 16px; /* Adjust the font size as desired */
+  }
+  .image-button {
+    width: 40px;
+    height: 40px; 
+  }
+  
